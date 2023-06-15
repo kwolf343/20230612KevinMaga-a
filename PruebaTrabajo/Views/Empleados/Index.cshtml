@@ -1,0 +1,44 @@
+﻿@model IEnumerable<PruebaTrabajo.Models.Empleado>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Empleados</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                FechaContratacion
+            </th>
+            <th>
+                Departamento
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.Nombre
+            </td>
+            <td>
+                @item.Apellido
+            </td>
+            <td>
+                @item.FechaContratacion
+            </td>
+            <td>
+                @item.IdDepartamentoNavigation.NombreDepartamento
+            </td>
+            </tr>
+}
+    </tbody>
+</table>

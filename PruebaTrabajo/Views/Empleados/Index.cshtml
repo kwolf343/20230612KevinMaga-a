@@ -6,8 +6,8 @@
 
 <h1>Empleados</h1>
 
-<table class="table">
-    <thead>
+<table class="Tabla">
+    <thead class="Cabezera">
         <tr>
             <th>
                 Nombre
@@ -25,7 +25,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+            <tr class="Celda">
             <td>
                 @item.Nombre
             </td>

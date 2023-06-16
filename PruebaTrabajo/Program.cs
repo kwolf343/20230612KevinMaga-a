@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<PruebaLaboralContext>(options => 
-    options.UseSqlServer(builder.Configuration.GetConnectionString("conexion")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("dockerConection")));
 
 var app = builder.Build();
 

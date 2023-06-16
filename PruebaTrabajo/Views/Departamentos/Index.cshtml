@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Selecciona departamento para ver los empleados asociados a el</h1>
+<h1>Departamentos por empleados</h1>
 
-<table class="table">
-    <thead>
+<table class="Tabla">
+    <thead class="Cabezera">
         <tr>
             <th>
                 Departamento
@@ -16,7 +16,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+            <tr class="Celda">
             <td>
                 <a asp-action="Seleccion" asp-route-id="@item.IdDepartamento">@item.NombreDepartamento</a>
             </td>
